@@ -12,10 +12,9 @@ $('#update_notes').submit(function(event){
 	$.map(unindexArray,function(n,i){
 		data[n['name']]=n['value']
 	})
-	console.log(unindexArray)
 
 	var request = {
-		"url": `http://localhost:4000/api/note/${data.id}`,
+		"url": `https://dropsnote.herokuapp.com/api/note/${data.id}`,
 		"method": `PUT`,
 		"data": data
 	}
@@ -29,10 +28,9 @@ if (window.location.pathname == '/') {
 	$ondelete = $('.mainGrid .noteContent .btnDate .edel a.delete')
 	$ondelete.click(function(){
 		var id = $(this).attr('data-id')
-		console.log(id)
 
 		var request = {
-			"url": `http://localhost:4000/api/note/${id}`,
+			"url": `https://dropsnote.herokuapp.com/api/note/${id}`,
 			"method": `DELETE`
 		}
 
