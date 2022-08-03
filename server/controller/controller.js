@@ -12,7 +12,7 @@ exports.create = (req,res)=>{
 	const note = new Notedb({
 		title: req.body.title,
 		text: req.body.text,
-		time: `${req.body.time.getMonth()}-${req.body.time.getDate()}-${req.body.time.getFullYear()}`
+		time: `${new Date().getMonth()}-${new Date().getDate()}-${new Date().getFullYear()}`
 	})
 	note.save(note)
 		.then(data=>{
