@@ -7,10 +7,7 @@ var schema = new mongoose.Schema({
 	text:{
 		type: String,
 	},
-	time: {
-		type: Date,
-		default: Date.now
-	}
+	timeStamp: true
 })
 const Notedb = mongoose.model('notes',schema)
 module.exports = Notedb
