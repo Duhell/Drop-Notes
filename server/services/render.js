@@ -1,7 +1,7 @@
 const axios = require('axios')
 
 exports.home = (req,res)=>{
-	axios.get("http://localhost:4000/api/note")
+	axios.get("https://dropsnote.herokuapp.com/api/note")
 	.then(function(response){
 		res.render('index',{writings: response.data})
 		console.log(response.data)
@@ -16,7 +16,7 @@ exports.add_note = (req,res)=>{
 }
 
 exports.update_note = (req,res)=>{
-	axios.get("http://localhost:4000/api/note", {params:{id:req.query.id}})
+	axios.get("https://dropsnote.herokuapp.com/api/note", {params:{id:req.query.id}})
 	.then(function(notedata){
 		res.render('_edit',{note: notedata.data} )
 
