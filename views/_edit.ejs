@@ -1,0 +1,29 @@
+<!--include header-->
+  <%- include("include/_header") %>
+<!--include header-->
+
+  <div class="container-sm mt-5">
+     <h5 class="text-center d-flex justify-content-between">Edit Note</h5>
+      <div class="new_notes">
+        <form method="POST" id="update_notes" name="notesForm">
+          <div class="form-group d-flex flex-column">
+            <label for="title" class=" fs-5">Title</label>
+            <input type="hidden" name="id" value="<%= note._id %>">
+            <input type="text" name="title" placeholder="Title" class="p-2" value="<%= note.title%>">
+          </div>
+          <div class="form-group d-flex flex-column">
+          <label for="text">Description</label>
+           <textarea name="text" class="p-2 fw-light fs-6" placeholder="Text Here" ><%= note.text%></textarea>
+            <div class="form-group d-flex flex-column">
+              <button type="submit" id="editbuttonsubmit" class="btn btn-outline-dark  mt-3 update">Save</button>
+              <a href="/" class="btn btn-outline-dark  mt-3 update">Back</a>
+            </div>
+          </div> 
+      </form>
+    </div>
+  </div>
+
+<!--include footer-->
+  <%- include("include/_footer") %>
+<!--include footer-->
+ 

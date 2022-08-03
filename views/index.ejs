@@ -1,0 +1,36 @@
+<!--include header-->
+  <%- include("include/_header") %>
+<!--include header-->
+
+<!-- Main Section -->
+  <main class="container fw-light">
+  <div id=preload></div>
+    <div class="row mt-3 grid container mainGrid">
+
+      <!-- Start of all notes -->
+      <% for(var i = 0; i< writings.length;i++){ %>
+      <div class="col-md-6 col-lg-3 border border-dark  shadow p-3 mb-5 bg-body rounded text-dark p-3 mw-50 h-auto noteContent">
+        <h6><%= writings[i].title %></h6><hr>
+        <div>
+           <p class="lh-md text-break" style="font-size: .9rem; font-weight: 300; letter-spacing: 1.2px"><%= writings[i].text %></p><hr>
+        </div>
+       
+        <div class="container d-flex justify-content-between align-items-center btnDate">
+          <span class="spanSize"><%= writings[i].time %></span>
+          <div class="edel">
+            <a href="/update?id=<%= writings[i]._id%>" class="btn btn-sm text-dark editBTN"><i class="fa-solid fa-pen"></i></a>
+            <a class="btn btn-sm text-dark delete" data-id=<%= writings[i]._id %> ><i class="fa-solid fa-trash"></i></a>
+          </div>
+        </div>
+      </div>
+      <% }%>
+        <!-- End of all notes -->
+    </div>
+  </main>
+
+<!-- End of Main Section -->
+
+<!--include footer-->
+  <%- include("include/_footer") %>
+<!--include footer-->
+ 

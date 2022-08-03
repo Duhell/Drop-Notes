@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins',sans-serif;
+}
+
+.button-dotted{
+	border: 1px dotted rgba(255, 255, 255, .7);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: auto;
+}
+
+.mainGrid{
+	grid-gap: 20px;
+}
+
+.spanSize{
+	font-size: .7rem
+}
+
+#preload{
+	background: #fff url(/img/loading-waiting.gif) no-repeat center center;
+	height: 70vh;
+	width: 80%;
+	position: fixed;
+	z-index: 100;
+}
