@@ -21,6 +21,8 @@ $('#update_notes').submit(function(event){
 
 	$.ajax(request).done(function(response){
 		alert(`Updated Succesfully!`)
+		location.href="/"
+
 	})
 })
 
@@ -48,10 +50,4 @@ const preload = document.getElementById('preload')
 
 window.addEventListener('load',()=>{
 	preload.style.display = 'none'
-})
-
-
-const back = document.getElementById('editbuttonsubmit')
-back.addEventListener('click',()=>{
-	location.href="/"
 })
