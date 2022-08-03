@@ -8,7 +8,8 @@ var schema = new mongoose.Schema({
 		type: String,
 	},
 	time: {
-		type: String
+		type: Date,
+		default: Date.now
 	}
 })
 const Notedb = mongoose.model('notes',schema)
