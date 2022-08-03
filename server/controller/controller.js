@@ -1,9 +1,5 @@
 let Notedb = require('../model/model')
 
-let date = new Date()
-let currentYear = date.getFullYear()
-let currentDay = date.getDate()
-let currentMonth = date.getMonth() + 1
 //create new note
 
 exports.create = (req,res)=>{
@@ -16,7 +12,7 @@ exports.create = (req,res)=>{
 	const note = new Notedb({
 		title: req.body.title,
 		text: req.body.text,
-		time: `${currentMonth}/${currentDay}/${currentYear}`
+		time: req.body.time
 	})
 	note.save(note)
 		.then(data=>{
