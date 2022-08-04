@@ -8,7 +8,7 @@ var schema = new mongoose.Schema({
 		type: String,
 	},
 	time: {
-		type: ISODate().toLocaleDateString("en-US")
+		type: Date,
 	}
 })
 const Notedb = mongoose.model('notes',schema)
