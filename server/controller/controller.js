@@ -11,7 +11,7 @@ exports.create = (req,res)=>{
 	const note = new Notedb({
 		title: req.body.title,
 		text: req.body.text,
-		time: req.body.time
+		time: ISODate().toLocaleDateString("en-US")
 	})
 	note.save(note)
 		.then(data=>{
