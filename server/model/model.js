@@ -7,8 +7,14 @@ var schema = new mongoose.Schema({
 	text:{
 		type: String,
 	},
-	time: {
+	month: {
 		type: Date	
+	}
+	day: {
+		type: Date
+	}
+	year: {
+		type: Date
 	}
 })
 const Notedb = mongoose.model('notes',schema)
