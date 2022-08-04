@@ -9,10 +9,10 @@ var schema = new mongoose.Schema({
 	},
 	month: {
 		type: Date	
-	}
+	},
 	day: {
 		type: Date
-	}
+	},
 	year: {
 		type: Date
 	}
