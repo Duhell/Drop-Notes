@@ -1,5 +1,4 @@
 let Notedb = require('../model/model')
-
 //create new note
 
 exports.create = (req,res)=>{
@@ -12,7 +11,7 @@ exports.create = (req,res)=>{
 	const note = new Notedb({
 		title: req.body.title,
 		text: req.body.text,
-		time: `${new Date().getMonth()+1}-${new Date().getDate()}-${new Date().getFullYear()}`
+		time: new Date().toLocaleDateString("en-US", {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'} )
 	})
 	note.save(note)
 		.then(data=>{
