@@ -7,15 +7,10 @@ var schema = new mongoose.Schema({
 	text:{
 		type: String,
 	},
-	month: {
-		type: Date	
-	},
-	day: {
-		type: Date
-	},
-	year: {
-		type: Date
+	currentDate: {
+		type: String
 	}
+	
 })
 const Notedb = mongoose.model('notes',schema)
 module.exports = Notedb
